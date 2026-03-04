@@ -2,10 +2,6 @@
 
 A modern, responsive portfolio website built with Astro, featuring multiple pages including a blog system, projects showcase, and about page.
 
-## Quick Deploy
-
-[![Deploy to Tencent Cloud](https://cdnstatic.tencentcs.com/edgeone/pages/deploy.svg)](https://edgeone.ai/pages/new?template=https://github.com/tomcomtang/astro-multiplepage-portfolio&output-directory=./dist&build-command=npm%20run%20build&install-command=npm%20install&entry_from=childtom)
-
 ## Preview
 
 You can preview the project online at:

@@ -1,16 +1,16 @@
 export const siteConfig = {
-  name: "Your Portfolio",
-  title: "Someone's Portfolio",
+  name: "My Portfolio",
+  title: "Simcak's Portfolio",
   description: "A showcase of my work and thoughts",
   social: {
-    github: "https://github.com/tomcomtang/astro-multiplepage-portfolio",
-    twitter: "https://x.com/astrodotbuild",
+    github: "https://github.com/simcak",
+    // twitter: "https://x.com/astrodotbuild",
     email: "mailto:364786053@qq.com",
   },
 };
 
 export const homeContent = {
-  title: "Hello, I'm Your Name",
+  title: "Hello, I'm Petr Simcak",
   description:
     "A passionate frontend developer with a keen eye for design and a love for creating beautiful, functional web experiences.",
   buttons: {
