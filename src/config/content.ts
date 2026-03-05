@@ -1,11 +1,12 @@
+// HOME
 export const siteConfig = {
   name: "My Portfolio",
   title: "Simcak's Portfolio",
   description: "A showcase of my work and thoughts",
   social: {
     github: "https://github.com/simcak",
-    // twitter: "https://x.com/astrodotbuild",
-    email: "mailto:364786053@qq.com",
+    linkedin: "https://www.linkedin.com/in/petr-simcak",
+    email: "mailto:fjords_headset.7w@icloud.com",
   },
 };
 
@@ -29,6 +30,7 @@ export const homeContent = {
   },
 };
 
+// ABOUT
 export const aboutContent = {
   meta: {
     title: "About - Your Portfolio",
@@ -38,14 +40,12 @@ export const aboutContent = {
   description:
     "This is where you can introduce yourself or your company. Share your story, mission, and values. Explain what makes you unique and why people should be interested in your work. Keep it concise but engaging.",
   skills: [
-    "Next.js",
-    "React",
-    "TypeScript",
-    "Tailwind CSS",
-    "Node.js",
-    "Docker",
+    "C",
+    "C++",
+    "Python",
+    "Matlab",
     "Git",
-    "AWS",
+    "Docker",
   ],
   image: {
     src: "/assets/images/about/coder.jpg",
@@ -82,41 +82,56 @@ export const aboutContent = {
       "Feel free to reach out if you want to collaborate or just say hi! You can find us on social media or drop us an",
     email: {
       text: "email",
-      href: "mailto:364786053@qq.com",
+      href: "mailto:fjords_headset.7w@icloud.com",
     },
   },
 };
 
+// PROJECTS
 export const projectsContent = {
   meta: {
     title: "Projects - Your Portfolio",
     description: "Showcase of my best work and projects",
   },
-  title: "Our Projects",
+  title: "My && Team Projects",
   description:
     "Here you can showcase your best work. Each project should include a brief description, the technologies used, and any notable achievements. This helps potential clients or employers understand your capabilities.",
   projects: [
+    // {
+    //   title: "Transcendence",
+    //   description:
+    //     "A brief description of your first project. Explain what it does and what technologies you used.",
+    //   image: "/assets/images/projects/project1.jpg",
+    //   href: "#",
+    // },
     {
-      title: "Project One",
-      description:
-        "A brief description of your first project. Explain what it does and what technologies you used.",
-      image: "/assets/images/projects/project1.jpg",
-      href: "#",
-    },
-    {
-      title: "Project Two",
+      title: "Cub3D",
       description:
         "Describe your second project here. Highlight the key features and your role in development.",
       image: "/assets/images/projects/project2.jpg",
       href: "#",
     },
     {
-      title: "Project Three",
+      title: "IRC",
+      description:
+        "Share details about your third project. What problems did it solve? What was the outcome?",
+      image: "/assets/images/projects/project1.jpg",
+      href: "#",
+    },
+    {
+      title: "Bachelor Thesis",
       description:
         "Share details about your third project. What problems did it solve? What was the outcome?",
       image: "/assets/images/projects/project3.png",
       href: "#",
     },
+    // {
+    //   title: "iProtect",
+    //   description:
+    //     "A brief description of your first project. Explain what it does and what technologies you used.",
+    //   image: "/assets/images/projects/project1.jpg",
+    //   href: "#",
+    // },
   ],
 };
 
