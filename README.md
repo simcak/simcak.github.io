@@ -1,12 +1,6 @@
 # Multiple Page Portfolio
 
-A modern, responsive portfolio website built with Astro, featuring multiple pages including a blog system, projects showcase, and about page.
-
-## Preview
-
-You can preview the project online at:
-
-<https://astro-multiplepage-portfolio.edgeone.app/>
+A personal portfolio website built with Astro, featuring multiple pages including: a blog system, projects showcase, and About page.
 
 ## Features
 
@@ -30,35 +24,33 @@ You can preview the project online at:
 
 ## Getting Started
 
-1. Clone the repository:
-
-```bash
-git clone https://github.com/tomcomtang/astro-multiplepage-portfolio.git
-```
-
-2. Install dependencies:
+1. Install dependencies:
 
 ```bash
 npm install
 ```
 
-3. Run the development server:
+2. Run the development server:
 
 ```bash
 npm run dev
 ```
+or
+```bash
+npm run start
+```
 
-4. Build for production:
+3. Build && Preview = for final version check
 
 ```bash
-npm run build
+npm run build && npm run preview
 ```
 
 ## Project Structure
 
 ```
 ├── src/
-│   ├── components/         # Reusable components
+│   ├── components/        # Reusable components
 │   ├── config/            # Configuration files
 │   ├── content/           # Markdown blog posts
 │   └── pages/             # Astro pages
