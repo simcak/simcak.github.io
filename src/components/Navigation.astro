@@ -10,7 +10,7 @@
         href="/"
         class="text-xl font-bold text-neutral-700 hover:text-neutral-400 dark:text-neutral-300 dark:hover:text-neutral-100 transition-colors"
       >
-        Your Portfolio
+        Peter
       </a>
       <div class="flex items-center space-x-6">
         <a
@@ -65,10 +65,12 @@
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     const themeToggle = document.getElementById("theme-toggle");
+    if (!themeToggle) return;
     const lightIcon = themeToggle.querySelector(".theme-icon-light");
     const darkIcon = themeToggle.querySelector(".theme-icon-dark");
 
-    function updateThemeIcon(isDark) {
+    function updateThemeIcon(isDark: boolean) {
+      if (!lightIcon || !darkIcon) return;
       if (isDark) {
         lightIcon.classList.add("hidden");
         darkIcon.classList.remove("hidden");
