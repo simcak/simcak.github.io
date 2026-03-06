@@ -50,10 +50,15 @@ export const aboutContent = {
   skills: [
     "C",
     "C++",
+    // "JavaScript",
+    // "Swift",
     "Python",
     "Matlab",
+    "Shell",
     "Git",
+    "Linux",
     "Docker",
+    "Nginx",
   ],
   image: {
     src: "/assets/images/about/coder.jpg",
