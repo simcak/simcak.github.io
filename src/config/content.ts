@@ -177,7 +177,7 @@ export const certificatesContent = {
     {
       title: "Mensa Card",
       description: "Description of certificate 1.",
-      image: "/assets/images/certificates/mensa.pdf",
+      image: "/assets/images/certificates/mensa.png",
       pdf: "http://www.mensa.cz/qr?id=9ynnqr33h",
       issuer: "Mensa",
       date: "2021",
