@@ -13,7 +13,7 @@ export const siteConfig = {
 };
 
 export const homeContent = {
-  title: "Hello, I'm Peter",
+  title: "Hello, I'm Petr",
   description:
     "A passionate frontend developer with a keen eye for design and a love for creating beautiful, functional web experiences.",
   buttons: {
@@ -97,7 +97,7 @@ export const aboutContent = {
     title: "Education",
     items: [
       {
-        period: "2021 - 2025",
+        period: "2020 - 2024",
         degree: "Bachelor of Sport Technology",
         institution: "Brno University of Technology",
         description: "Focused on software development and algorithms.",
@@ -134,9 +134,9 @@ export const projectsContent = {
     {
       title: "Cub3D",
       description:
-        "Describe your second project here. Highlight the key features and your role in development.",
+        "3D Graphic game written in C. It is simplified Wolfenstein 3D. It is based on raycasting and parsing algorithm.",
       image: "/assets/images/projects/Cub3D.gif",
-      href: "#",
+      href: "https://github.com/simcak/Core/tree/main/11_CUB3D",
     },
     {
       title: "IRC",
@@ -148,9 +148,9 @@ export const projectsContent = {
     {
       title: "Bachelor Thesis",
       description:
-        "Share details about your third project. What problems did it solve? What was the outcome?",
-      image: "/assets/images/projects/project3.png",
-      href: "#",
+        "Heart Rate Estimation from the PPG Signals. Code is done in Python and the thesis is written in LaTeX.",
+      image: "/assets/images/projects/bakalarka.gif",
+      href: "/assets/images/projects/bakalarka.pdf",
     },
     // {
     //   title: "iProtect",
