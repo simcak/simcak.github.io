@@ -1,6 +1,6 @@
 # Multiple Page Portfolio
 
-A personal portfolio website built with Astro, featuring multiple pages including: a blog system, projects showcase, and About page.
+A personal blog theme template that includes automatic recognition of Markdown content and generates configuration accordingly.
 
 ## Features
 
@@ -57,56 +57,10 @@ npm run build && npm run preview
 └── public/                # Static assets
 ```
 
-## Content Management
-
-### Blog Posts
-
-1. Create your markdown files in `src/content/posts/` directory
-2. Each markdown file should follow this format:
-
-```markdown
----
-title: Your Post Title
-description: A brief description of your post
-date: 2024-03-21
-readTime: 5 min
----
-
-Your post content here...
-```
-
-### Page Content
+## Customization
 
 You can customize the content of different pages by modifying `src/config/content.ts`:
-
-- Site metadata and social links
-- Home page content
-- About page content
-- Projects showcase
-
-## Blog System
-
-The blog system supports:
-
-- Markdown content
-- Code syntax highlighting
-- Reading time estimation
-- Pagination
-
-## Customization
 
 1. Add new blog posts by creating Markdown files in the `src/content/posts` directory
 2. Update project information in `src/config/content.ts`
 3. Modify site configuration in `src/config/content.ts`
-
-## License
-
-MIT
-
-## Author
-
-tomcomtang
-
-## About
-
-A personal blog theme template that includes automatic recognition of Markdown content and generates configuration accordingly.
