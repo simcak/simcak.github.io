@@ -198,7 +198,7 @@ export const certificatesContent = {
   },
   title: "Certificates",
   description:
-    "Here you can showcase your certificates and achievements. Each certificate should include a brief description and the issuing organization.",
+    "Here are my certificates and achievements across different domains.",
   certificates: [
     {
       title: "Mensa Card",
