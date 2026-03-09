@@ -1,8 +1,5 @@
 //////////
 // HOME //
-
-import { link } from "fs";
-
 //////////
 export const siteConfig = {
   name: "My Portfolio",
