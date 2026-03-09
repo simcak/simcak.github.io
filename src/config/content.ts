@@ -141,7 +141,7 @@ export const projectsContent = {
   },
   title: "Projects",
   description:
-    "Here you can showcase your best work. Each project should include a brief description, the technologies used, and any notable achievements. This helps potential clients or employers understand your capabilities.",
+    "Here is a curated set of projects that reflects my growth as a developer, my hands-on approach to problem-solving, and my focus on thoughtful design, technical depth, and turning ideas/assignments into something real.",
   projects: [
     // {
     //   title: "Transcendence",
@@ -158,18 +158,18 @@ export const projectsContent = {
       href: "https://github.com/simcak/Core/tree/main/11_CUB3D",
     },
     {
-      title: "IRC",
-      description:
-        "Share details about your third project. What problems did it solve? What was the outcome?",
-      image: "/assets/images/projects/project1.jpg",
-      href: "#",
-    },
-    {
       title: "Bachelor Thesis",
       description:
         "Heart Rate Estimation from the PPG Signals. Code is done in Python and the thesis is written in LaTeX.",
       image: "/assets/images/projects/bakalarka.gif",
       href: "/assets/images/projects/bakalarka.pdf",
+    },
+    {
+      title: "IRC (Internet Relay Chat)",
+      description:
+        "42 team project: a server written in C++. It supports multiple clients, channels, and basic IRC commands.",
+      image: "/assets/images/projects/IRC.png",
+      href: "https://github.com/simcak/Core/tree/main/14_IRC",
     },
     // {
     //   title: "iProtect",
