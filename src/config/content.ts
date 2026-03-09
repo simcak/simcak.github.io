@@ -54,17 +54,17 @@ export const aboutContent = {
     "Matlab",
     "Shell",
     "Git",
-    "LaTeX",
-    "Linux",
     "Docker",
     "Nginx",
+    "LaTeX",
+    "Linux",
     "PrusaSlicer",
     "3D printing",
   ],
   languages: [
-    "🇬🇧 (fluent)",
-    "🇨🇿 (native)",
-    "🇩🇪 (B1)",
+    "🇬🇧 fluent",
+    "🇨🇿 native",
+    "🇩🇪 B1",
   ],
   softSkills: [
     "Creativity",
@@ -108,7 +108,7 @@ export const aboutContent = {
   aboutMe: {
     title: "About Me",
     description:
-      "This is where you can introduce yourself or your company. Share your story, mission, and values. Explain what makes you unique and why people should be interested in your work. Keep it concise but engaging.",
+      "I am a developer who enjoys understanding systems in depth and building a clean software with care. I am drawn to challenging problems, practical implementation, and the kind of work that pushes me to think clearly and keep learning. I value thoughtful, nice design, technical depth and user experience. I am also a former movie and theatre actor with over 10 years of experience, which has given me a unique perspective on IT from the humanistic standpoint.",
   },
   education: {
     title: "Education",
@@ -202,7 +202,7 @@ export const certificatesContent = {
   certificates: [
     {
       title: "Mensa Card",
-      description: "Description of certificate 1.",
+      description: "Proof of membership in Mensa.",
       image: "/assets/images/certificates/mensa.png",
       pdf: "http://www.mensa.cz/qr?id=9ynnqr33h",
       issuer: "Mensa",
@@ -210,15 +210,15 @@ export const certificatesContent = {
     },
     {
       title: "National Math Testing",
-      description: "Description of certificate 1.",
+      description: "Diploma in Mathematics competition.",
       image: "/assets/images/certificates/scio.png",
       pdf: "/assets/images/certificates/scio_mat.pdf",
       issuer: "SCIO",
       date: "2019",
     },
     {
-      title: "Curs Elements of AI",
-      description: "Description of certificate 2.",
+      title: "AI Course",
+      description: "Diploma in Elements of AI course.",
       image: "/assets/images/certificates/elements_of_AI.png",
       pdf: "/assets/images/certificates/elements_of_AI.pdf",
       issuer: "Elements of AI",
