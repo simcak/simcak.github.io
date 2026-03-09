@@ -30,10 +30,6 @@ export const homeContent = {
       href: "/assets/pdf/cv.pdf",
     },
   },
-  images: {
-    light: "https://multiplepage-portfolio.edgeone.app/assets/images/tech-background-light.svg",
-    dark: "/assets/images/tech-background-dark.svg",
-  },
 };
 
 ///////////
