@@ -1,5 +1,8 @@
 //////////
 // HOME //
+
+import { link } from "fs";
+
 //////////
 export const siteConfig = {
   name: "My Portfolio",
@@ -13,9 +16,9 @@ export const siteConfig = {
 };
 
 export const homeContent = {
-  title: "Hello, I'm Petr",
+  title: "Hi, it's Petr",
   description:
-    "A passionate frontend developer with a keen eye for design and a love for creating beautiful, functional web experiences.",
+    "",
   buttons: {
     about: {
       text: "View About",
@@ -44,10 +47,8 @@ export const aboutContent = {
     title: "About - Simcak",
     description: "Learn more about my background, skills, and experience",
   },
-  title: "About Me",
-  description:
-    "This is where you can introduce yourself or your company. Share your story, mission, and values. Explain what makes you unique and why people should be interested in your work. Keep it concise but engaging.",
-  skills: [
+  title: "About",
+  technicalSkills: [
     "C",
     "C++",
     // "JavaScript",
@@ -56,9 +57,25 @@ export const aboutContent = {
     "Matlab",
     "Shell",
     "Git",
+    "LaTeX",
     "Linux",
     "Docker",
     "Nginx",
+    "PrusaSlicer",
+    "3D printing",
+  ],
+  languages: [
+    "🇬🇧 (fluent)",
+    "🇨🇿 (native)",
+    "🇩🇪 (B1)",
+  ],
+  softSkills: [
+    "Creativity",
+    "Problem Solving",
+    "Team Work",
+    "Communication",
+    "Cross-cultural Collaboration",
+    "Adaptability",
   ],
   image: {
     src: "/assets/images/about/coder.jpg",
@@ -67,51 +84,51 @@ export const aboutContent = {
   experience: {
     title: "Experience",
     items: [
+      // {
+      //   period: "2026 - Present",
+      //   position: "Junior IT support specialist",
+      //   company: "42Prague",
+      //   description: "Worked on various client projects and internal tools.",
+      // },
       {
-        period: "2022 - Present",
-        position: "Senior Frontend Developer",
-        company: "Tencent Cloud",
-        description:
-          "Leading frontend development for EdgeOne platform and templates.",
+        period: "2013 - 2021",
+        position: "Movie Actor",
+        company: "Czech, German and US productions",
+        description:"Performed in multiple movies and TV shows in multiple languages since the age of 12. The main role was in the movie 'To see the sea' (2014) for which I won the Zlín Film Festival award for the best young actor.",
+        icon: "movie",
+        link: "https://www.imdb.com/name/nm5791331/",
       },
       {
-        period: "2020 - 2022",
-        position: "Frontend Developer",
-        company: "Tencent Cloud",
-        description:
-          "Developed and maintained multiple web applications and tools.",
-      },
-      {
-        period: "2018 - 2020",
-        position: "Junior Developer",
-        company: "Tencent Cloud",
-        description: "Worked on various client projects and internal tools.",
-      },
+        period: "2009 - 2015",
+        position: "Theatre Actor",
+        company: "Brno City Theatre",
+        description:"Performed in 7 different plays (including one of the main roles in Marry Poppins) since the age of 8.",
+        icon: "theatre",
+        link: "https://www.mdb.cz/cs/lide/petr-simcak",
+      }
     ],
   },
-  connect: {
-    title: "Let's Connect",
+  aboutMe: {
+    title: "About Me",
     description:
-      "Feel free to reach out if you want to collaborate or just say hi! You can find us on social media or drop us an",
-    email: {
-      text: "email",
-      href: "mailto:fjords_headset.7w@icloud.com",
-    },
+      "This is where you can introduce yourself or your company. Share your story, mission, and values. Explain what makes you unique and why people should be interested in your work. Keep it concise but engaging.",
   },
   education: {
     title: "Education",
     items: [
       {
+        period: "2023 - 2026",
+        degree: "Common Core at 42Prague",
+        institution: "École 42",
+        description: "Specialized in advanced topics in computer science and low level programming.",
+        link: "https://www.42prague.com"
+      },
+      {
         period: "2020 - 2024",
         degree: "Bachelor of Sport Technology",
         institution: "Brno University of Technology",
-        description: "Focused on software development and algorithms.",
-      },
-      {
-        period: "2023 - 2026",
-        degree: "Common Core",
-        institution: "École 42",
-        description: "Specialized in advanced topics in computer science.",
+        description: "Focused on signal processing and analysis with applications in sports and health.",
+        link: "https://www.vut.cz/en/students/programmes/programme/6264"
       },
     ],
   },
@@ -164,6 +181,13 @@ export const projectsContent = {
     //   image: "/assets/images/projects/project1.jpg",
     //   href: "#",
     // },
+    {
+      title: "Other Projects",
+      description:
+        "Explore my GitHub profile, where you'll find open-source projects as well as links and brief descriptions of selected private work hosted in organizations.",
+      image: "/assets/images/projects/mario_pixelArt_wallpaper.gif",
+      href: "https://github.com/simcak",
+    },
   ],
 };
 
