@@ -53,7 +53,8 @@ const postsData = JSON.stringify(allPosts);
           });
       });
     </script>
-    <script define:vars={{ postsData, POSTS_PER_PAGE }}>
+    <script is:inline define:vars={{ postsData, POSTS_PER_PAGE }}>
+      // @ts-nocheck
       document.addEventListener("DOMContentLoaded", function () {
         const allPosts = JSON.parse(postsData);
         const postsPerPage = POSTS_PER_PAGE;
