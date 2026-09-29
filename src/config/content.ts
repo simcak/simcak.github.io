@@ -44,7 +44,7 @@ export const aboutContent = {
   technicalSkills: [
     "C",
     "C++",
-    // "JavaScript",
+    "JavaScript",
     // "Swift",
     "Python",
     "Matlab",
@@ -77,12 +77,13 @@ export const aboutContent = {
   experience: {
     title: "Experience",
     items: [
-      // {
-      //   period: "2026 - Present",
-      //   position: "Junior IT support specialist",
-      //   company: "42Prague",
-      //   description: "Worked on various client projects and internal tools.",
-      // },
+      {
+        period: "2026 - Present",
+        position: "Tech Lead",
+        company: "AI Camp",
+        description: "Tutoring and supporting adult learners from big companies to use efficiently and creatively LLMs and other AI technologies. Main focus on maintaining and developing the AI Camp education and internal tools.",
+        icon: "ai",
+      },
       {
         period: "2013 - 2021",
         position: "Movie Actor",
