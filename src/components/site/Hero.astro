@@ -1,0 +1,68 @@
+---
+import Icon from "./Icon.astro";
+import { homeContent, siteConfig, aboutContent } from "../../config/content";
+
+// "Hi, it's Petr" -> highlight the last word with the gradient
+const words = homeContent.title.trim().split(" ");
+const lastWord = words.pop();
+const firstPart = words.join(" ");
+
+// Fill homeContent.description in content.ts to override this tagline.
+const tagline =
+  homeContent.description ||
+  "Developer who enjoys understanding systems in depth and building clean software with care - from low-level C/C++ to thoughtful, well-designed interfaces.";
+
+const skills = aboutContent.technicalSkills.slice(0, 3).join(", ");
+const langs = aboutContent.languages.join("  ");
+const school = aboutContent.education.items[0]?.degree ?? "";
+---
+
+<section class="hero" id="top">
+  <div class="container hero-grid">
+    <div>
+      <div class="hero-badge reveal"><span class="dot"></span> Developer · 42Prague</div>
+
+      <h1 class="reveal" style="--d:80ms">
+        {firstPart} <span class="wave" aria-hidden="true">👋</span>
+        <br />
+        <span class="gradient-text">{lastWord}</span>
+      </h1>
+
+      <p class="tagline reveal" style="--d:160ms">{tagline}</p>
+
+      <div class="hero-actions reveal" style="--d:240ms">
+        <a class="btn btn-primary" href="#about">
+          {homeContent.buttons.about.text}
+        </a>
+        <a class="btn btn-outline" href="#projects">
+          {homeContent.buttons.projects.text}
+        </a>
+        <a class="btn btn-outline" href={homeContent.buttons.cv.href} target="_blank" rel="noopener">
+          <Icon name="download" />
+          {homeContent.buttons.cv.text}
+        </a>
+      </div>
+
+      <div class="socials reveal" style="--d:320ms">
+        <a class="icon-btn" href={siteConfig.social.github} target="_blank" rel="noopener" aria-label="GitHub"><Icon name="github" /></a>
+        <a class="icon-btn" href={siteConfig.social.linkedin} target="_blank" rel="noopener" aria-label="LinkedIn"><Icon name="linkedin" /></a>
+        <a class="icon-btn" href={siteConfig.social.email} aria-label="Email"><Icon name="mail" /></a>
+      </div>
+    </div>
+
+    <div class="reveal" style="--d:200ms">
+      <div class="card terminal" aria-hidden="true">
+        <div class="terminal-bar"><i></i><i></i><i></i><span>petr@portfolio: ~</span></div>
+        <div class="terminal-body">
+          <div><span class="prompt">$</span> whoami</div>
+          <div class="dim">petr, developer &amp; ex-actor</div>
+          <div><span class="prompt">$</span> cat stack.txt</div>
+          <div><span class="key">languages</span> <span class="dim">=</span> <span class="val">{skills}, ...</span></div>
+          <div><span class="key">studied</span> <span class="dim">=</span> <span class="val">{school}</span></div>
+          <div><span class="key">speaks</span> <span class="dim">=</span> <span class="val">{langs}</span></div>
+          <div><span class="prompt">$</span> <span class="cursor"></span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

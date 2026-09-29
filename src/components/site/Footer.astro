@@ -1,0 +1,16 @@
+---
+import Icon from "./Icon.astro";
+import { siteConfig } from "../../config/content";
+const year = new Date().getFullYear();
+---
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <span>© {year} Petr Simcak. All rights reserved.</span>
+    <div class="socials">
+      <a class="icon-btn" href={siteConfig.social.github} target="_blank" rel="noopener" aria-label="GitHub"><Icon name="github" /></a>
+      <a class="icon-btn" href={siteConfig.social.linkedin} target="_blank" rel="noopener" aria-label="LinkedIn"><Icon name="linkedin" /></a>
+      <a class="icon-btn" href={siteConfig.social.email} aria-label="Email"><Icon name="mail" /></a>
+    </div>
+  </div>
+</footer>

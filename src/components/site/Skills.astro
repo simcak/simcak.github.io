@@ -1,0 +1,28 @@
+---
+import { aboutContent } from "../../config/content";
+
+const groups = [
+  { title: "Technical skills", emoji: "🛠️", items: aboutContent.technicalSkills, wide: true },
+  { title: "Languages", emoji: "🌍", items: aboutContent.languages, wide: false },
+  { title: "Soft skills", emoji: "🤝", items: aboutContent.softSkills, wide: false },
+];
+---
+
+<section class="section" id="skills">
+  <div class="container">
+    <span class="section-eyebrow reveal">02 / toolbox</span>
+    <h2 class="section-title reveal">Skills</h2>
+    <p class="section-lead reveal">The tools, languages and habits I work with.</p>
+
+    <div class="skills-grid">
+      {groups.map((g, i) => (
+        <div class={`card skill-card reveal ${g.wide ? "wide" : ""}`} style={`--d:${i * 100}ms`}>
+          <h3><span class="emoji">{g.emoji}</span>{g.title}</h3>
+          <div class="chip-row">
+            {g.items.map((s) => <span class="chip">{s}</span>)}
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

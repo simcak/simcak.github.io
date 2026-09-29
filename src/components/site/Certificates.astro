@@ -1,0 +1,30 @@
+---
+import Icon from "./Icon.astro";
+import { certificatesContent } from "../../config/content";
+---
+
+<section class="section alt" id="certificates">
+  <div class="container">
+    <span class="section-eyebrow reveal">05 / achievements</span>
+    <h2 class="section-title reveal">{certificatesContent.title}</h2>
+    <p class="section-lead reveal">{certificatesContent.description}</p>
+
+    <div class="cards-grid three">
+      {certificatesContent.certificates.map((c, i) => (
+        <article class="card hover media-card reveal" style={`--d:${i * 100}ms`}>
+          <div class="media-thumb cert-thumb">
+            <img src={c.image} alt={c.title} loading="lazy" />
+          </div>
+          <div class="media-body">
+            <div class="meta-row"><span class="issuer">{c.issuer}</span><span>{c.date}</span></div>
+            <h3>{c.title}</h3>
+            <p>{c.description}</p>
+            <a class="text-link stretched" href={c.pdf} target="_blank" rel="noopener">
+              View certificate <Icon name="arrow-up-right" />
+            </a>
+          </div>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>

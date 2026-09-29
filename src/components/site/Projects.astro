@@ -1,0 +1,36 @@
+---
+import Icon from "./Icon.astro";
+import { projectsContent } from "../../config/content";
+
+const isExternal = (href: string) => /^https?:\/\//.test(href) || href.endsWith(".pdf");
+---
+
+<section class="section" id="projects">
+  <div class="container">
+    <span class="section-eyebrow reveal">04 / work</span>
+    <h2 class="section-title reveal">{projectsContent.title}</h2>
+    <p class="section-lead reveal">{projectsContent.description}</p>
+
+    <div class="cards-grid">
+      {projectsContent.projects.map((p, i) => (
+        <article class="card hover media-card reveal" style={`--d:${(i % 2) * 100}ms`}>
+          <div class="media-thumb">
+            <img src={p.image} alt={p.title} loading="lazy" />
+          </div>
+          <div class="media-body">
+            <h3>{p.title}</h3>
+            <p>{p.description}</p>
+            <a
+              class="text-link stretched"
+              href={p.href}
+              target={isExternal(p.href) ? "_blank" : undefined}
+              rel={isExternal(p.href) ? "noopener" : undefined}
+            >
+              View project <Icon name="arrow-up-right" />
+            </a>
+          </div>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
