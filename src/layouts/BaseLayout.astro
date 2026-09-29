@@ -1,16 +1,19 @@
 ---
 import "../styles/global.css";
-import { siteConfig } from "../config/content";
+import { getContent } from "../config/content";
+import { locales, toLang, langPath } from "../config/i18n";
 
 interface Props {
   title?: string;
   description?: string;
 }
+const lang = toLang(Astro.currentLocale);
+const { siteConfig } = getContent(lang);
 const { title = siteConfig.title, description = siteConfig.description } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang={lang}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -18,8 +21,11 @@ const { title = siteConfig.title, description = siteConfig.description } = Astro
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
+    <meta property="og:locale" content={lang === "cs" ? "cs_CZ" : "en_US"} />
     <meta name="theme-color" content="#0ea5e9" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    {locales.map((l) => <link rel="alternate" hreflang={l} href={new URL(langPath(l), Astro.site)} />)}
+    <link rel="alternate" hreflang="x-default" href={new URL(langPath("en"), Astro.site)} />
     <title>{title}</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />

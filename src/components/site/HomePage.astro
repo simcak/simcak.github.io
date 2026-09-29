@@ -1,0 +1,29 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Header from "./Header.astro";
+import Hero from "./Hero.astro";
+import About from "./About.astro";
+import Skills from "./Skills.astro";
+import Experience from "./Experience.astro";
+import Projects from "./Projects.astro";
+import Certificates from "./Certificates.astro";
+import Contact from "./Contact.astro";
+import Footer from "./Footer.astro";
+import { getContent } from "../../config/content";
+
+const { ui } = getContent(Astro.currentLocale);
+---
+
+<BaseLayout title={ui.meta.title} description={ui.meta.description}>
+  <Header />
+  <main>
+    <Hero />
+    <About />
+    <Skills />
+    <Experience />
+    <Projects />
+    <Certificates />
+    <Contact />
+  </main>
+  <Footer />
+</BaseLayout>

@@ -1,30 +1,39 @@
 ---
 import Icon from "./Icon.astro";
+import { getContent } from "../../config/content";
+import { locales, langLabels, langPath, toLang } from "../../config/i18n";
 
-const links = [
-  { href: "#about", label: "About" },
-  { href: "#skills", label: "Skills" },
-  { href: "#experience", label: "Experience" },
-  { href: "#projects", label: "Projects" },
-  { href: "#certificates", label: "Certificates" },
-  { href: "#contact", label: "Contact" },
-];
+const lang = toLang(Astro.currentLocale);
+const { ui } = getContent(lang);
+const t = ui.header;
 ---
 
 <header class="header" id="header">
   <div class="container header-inner">
-    <a href="#top" class="logo" aria-label="Back to top">&lt;<span>petr</span> /&gt;</a>
+    <a href="#top" class="logo" aria-label={t.backToTop}>&lt;<span>petr</span> /&gt;</a>
 
-    <nav class="nav" id="nav" aria-label="Main">
-      {links.map((l) => <a class="nav-link" href={l.href}>{l.label}</a>)}
+    <nav class="nav" id="nav" aria-label={t.navLabel}>
+      {t.nav.map((l) => <a class="nav-link" href={l.href}>{l.label}</a>)}
     </nav>
 
     <div class="header-actions">
-      <button class="icon-btn theme-toggle" id="theme-toggle" type="button" aria-label="Toggle dark mode">
+      <div class="lang-switch" role="group" aria-label={t.language}>
+        {locales.map((l) => (
+          <a
+            href={langPath(l)}
+            hreflang={l}
+            lang={l}
+            aria-current={l === lang ? "true" : undefined}
+          >
+            {langLabels[l]}
+          </a>
+        ))}
+      </div>
+      <button class="icon-btn theme-toggle" id="theme-toggle" type="button" aria-label={t.toggleTheme}>
         <Icon name="moon" class="moon" />
         <Icon name="sun" class="sun" />
       </button>
-      <button class="icon-btn menu-btn" id="menu-btn" type="button" aria-label="Open menu" aria-expanded="false">
+      <button class="icon-btn menu-btn" id="menu-btn" type="button" aria-label={t.openMenu} aria-expanded="false">
         <Icon name="menu" />
       </button>
     </div>
@@ -43,6 +52,14 @@ const links = [
     document.documentElement.setAttribute("data-theme", next);
     try { localStorage.setItem("theme", next); } catch (e) {}
   });
+
+  // Language switch: keep the current section when changing language
+  document.querySelectorAll<HTMLAnchorElement>(".lang-switch a").forEach((a) =>
+    a.addEventListener("click", (e) => {
+      if (a.getAttribute("aria-current")) return e.preventDefault();
+      a.hash = location.hash;
+    })
+  );
 
   // Mobile menu
   menuBtn.addEventListener("click", () => {

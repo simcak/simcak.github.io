@@ -282,6 +282,31 @@ h1, h2, h3, p {
 .icon-btn svg { width: 1.15rem; height: 1.15rem; }
 .header-actions { display: flex; align-items: center; gap: 0.6rem; }
 
+.lang-switch {
+  display: inline-flex;
+  height: 2.5rem;
+  padding: 3px;
+  gap: 2px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--card);
+}
+.lang-switch a {
+  display: grid;
+  place-items: center;
+  min-width: 2.2rem;
+  padding-inline: 0.4rem;
+  border-radius: 7px;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--fg-muted);
+  transition: color 0.25s ease, background-color 0.25s ease;
+}
+.lang-switch a:hover { color: var(--primary); }
+.lang-switch a[aria-current="true"] { background: var(--primary); color: #04202f; cursor: default; }
+:root:not([data-theme="dark"]) .lang-switch a[aria-current="true"] { background: var(--primary-strong); color: #fff; }
+
 .theme-toggle .sun { display: none; }
 :root[data-theme="dark"] .theme-toggle .sun { display: block; }
 :root[data-theme="dark"] .theme-toggle .moon { display: none; }

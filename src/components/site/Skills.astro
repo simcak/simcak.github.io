@@ -1,18 +1,21 @@
 ---
-import { aboutContent } from "../../config/content";
+import { getContent } from "../../config/content";
+
+const { aboutContent, ui } = getContent(Astro.currentLocale);
+const t = ui.skills;
 
 const groups = [
-  { title: "Technical skills", emoji: "🛠️", items: aboutContent.technicalSkills, wide: true },
-  { title: "Languages", emoji: "🌍", items: aboutContent.languages, wide: false },
-  { title: "Soft skills", emoji: "🤝", items: aboutContent.softSkills, wide: false },
+  { title: t.technical, emoji: "🛠️", items: aboutContent.technicalSkills, wide: true },
+  { title: t.languages, emoji: "🌍", items: aboutContent.languages, wide: false },
+  { title: t.soft, emoji: "🤝", items: aboutContent.softSkills, wide: false },
 ];
 ---
 
 <section class="section" id="skills">
   <div class="container">
-    <span class="section-eyebrow reveal">02 / toolbox</span>
-    <h2 class="section-title reveal">Skills</h2>
-    <p class="section-lead reveal">The tools, languages and habits I work with.</p>
+    <span class="section-eyebrow reveal">{t.eyebrow}</span>
+    <h2 class="section-title reveal">{t.title}</h2>
+    <p class="section-lead reveal">{t.lead}</p>
 
     <div class="skills-grid">
       {groups.map((g, i) => (

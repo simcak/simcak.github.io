@@ -5,6 +5,11 @@ import tailwind from '@astrojs/tailwind';
 export default defineConfig({
   site: 'https://simcak.github.io',
   integrations: [tailwind()],
+  i18n: {
+    defaultLocale: 'en',
+    locales: ['en', 'cs'],
+    routing: { prefixDefaultLocale: false }
+  },
   server: {
     port: 4321,
     host: true

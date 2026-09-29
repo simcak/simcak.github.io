@@ -1,13 +1,14 @@
 ---
 import Icon from "./Icon.astro";
-import { projectsContent } from "../../config/content";
+import { getContent } from "../../config/content";
 
+const { projectsContent, ui } = getContent(Astro.currentLocale);
 const isExternal = (href: string) => /^https?:\/\//.test(href) || href.endsWith(".pdf");
 ---
 
 <section class="section" id="projects">
   <div class="container">
-    <span class="section-eyebrow reveal">04 / work</span>
+    <span class="section-eyebrow reveal">{ui.projects.eyebrow}</span>
     <h2 class="section-title reveal">{projectsContent.title}</h2>
     <p class="section-lead reveal">{projectsContent.description}</p>
 
@@ -26,7 +27,7 @@ const isExternal = (href: string) => /^https?:\/\//.test(href) || href.endsWith(
               target={isExternal(p.href) ? "_blank" : undefined}
               rel={isExternal(p.href) ? "noopener" : undefined}
             >
-              View project <Icon name="arrow-up-right" />
+              {ui.projects.view} <Icon name="arrow-up-right" />
             </a>
           </div>
         </article>

@@ -1,11 +1,13 @@
 ---
 import Icon from "./Icon.astro";
-import { certificatesContent } from "../../config/content";
+import { getContent } from "../../config/content";
+
+const { certificatesContent, ui } = getContent(Astro.currentLocale);
 ---
 
 <section class="section alt" id="certificates">
   <div class="container">
-    <span class="section-eyebrow reveal">05 / achievements</span>
+    <span class="section-eyebrow reveal">{ui.certificates.eyebrow}</span>
     <h2 class="section-title reveal">{certificatesContent.title}</h2>
     <p class="section-lead reveal">{certificatesContent.description}</p>
 
@@ -20,7 +22,7 @@ import { certificatesContent } from "../../config/content";
             <h3>{c.title}</h3>
             <p>{c.description}</p>
             <a class="text-link stretched" href={c.pdf} target="_blank" rel="noopener">
-              View certificate <Icon name="arrow-up-right" />
+              {ui.certificates.view} <Icon name="arrow-up-right" />
             </a>
           </div>
         </article>
