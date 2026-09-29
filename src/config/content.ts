@@ -139,7 +139,7 @@ const aboutContent = {
         link: "https://www.42prague.com",
       },
       {
-        period: "2020 - 2024",
+        period: "2020 - 2025",
         degree: { en: "Bachelor of Sport Technology", cs: "Bakalář – Sportovní technologie" },
         institution: { en: "Brno University of Technology", cs: "Vysoké učení technické v Brně" },
         description: {
